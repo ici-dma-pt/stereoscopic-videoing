@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Stereoscopic videoing</title>
+    <title>Stereoscopic Videoing</title>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene vr-mode-ui="enabled: true">
       <a-assets>
         <video
           id="stereoVid"
@@ -15,8 +15,8 @@
           loop
           muted
           playsinline
-          crossorigin="anonymous">
-        </video>
+          crossorigin="anonymous"
+        ></video>
       </a-assets>
 
       <a-video
@@ -24,9 +24,8 @@
         width="4"
         height="2"
         position="0 1.6 -4"
-        rotation="0 0 0"
-        material="shader: flat;">
-      </a-video>
+        material="shader: flat;"
+      ></a-video>
     </a-scene>
   </body>
 </html>
