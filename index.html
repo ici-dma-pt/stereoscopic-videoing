@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-stereo-component@0.4.0/dist/aframe-stereo-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene vr-mode-ui="enabled: true">
+      <a-assets>
+        <!-- Replace with your stereo video -->
+        <video id="stereoVid" src="assets/videos/1/sun.mpeg" autoplay loop crossorigin="anonymous" muted playsinline></video>
+      </a-assets>
+
+      <!-- Left Eye -->
+      <a-video
+        src="#stereoVid"
+        width="4"
+        height="2"
+        position="-0.1 1.6 -4"
+        stereo="eye:left"
+        scale="1 1 1"
+        material="shader: flat; src: #stereoVid; npot: true; transparent: false; repeat: 0.5 1; offset: 0 0">
+      </a-video>
+
+      <!-- Right Eye -->
+      <a-video
+        src="#stereoVid"
+        width="4"
+        height="2"
+        position="0.1 1.6 -4"
+        stereo="eye:right"
+        scale="1 1 1"
+        material="shader: flat; src: #stereoVid; npot: true; transparent: false; repeat: 0.5 1; offset: 0.5 0">
+      </a-video>
+    </a-scene>
+  </body>
+</html>
