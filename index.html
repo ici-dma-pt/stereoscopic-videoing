@@ -8,7 +8,6 @@
   <body>
     <a-scene vr-mode-ui="enabled: true">
       <a-assets>
-        <!-- Replace with your stereo video -->
         <video
           id="stereoVid"
           src="assets/videos/1/sun.mp4"
@@ -20,23 +19,23 @@
         ></video>
       </a-assets>
 
-      <!-- Left Eye View -->
+      <!-- Left Eye -->
       <a-video
         src="#stereoVid"
         width="4"
         height="2"
-        position="-0.1 1.6 -4"
-        material="shader: flat; src: #stereoVid; repeat: 0.5 1; offset: 0 0"
+        position="0 1.6 -4"
+        material="shader: flat; src: #stereoVid; repeat: 0.5 1; offset: 0.25 0"
         stereo="eye:left"
       ></a-video>
 
-      <!-- Right Eye View -->
+      <!-- Right Eye -->
       <a-video
         src="#stereoVid"
         width="4"
         height="2"
-        position="0.1 1.6 -4"
-        material="shader: flat; src: #stereoVid; repeat: 0.5 1; offset: 0.5 0"
+        position="0 1.6 -4"
+        material="shader: flat; src: #stereoVid; repeat: 0.5 1; offset: 0.75 0"
         stereo="eye:right"
       ></a-video>
     </a-scene>
